@@ -3,9 +3,8 @@ let rec fibo = function
     | 0 -> 0
     | 1 -> 1
     | 2 -> 1
-    | -1 -> 1
-    | n when n < 0 -> fibo (n+2) - fibo (n+1)
-    | n -> fibo (n-1) + fibo (n-2)
+    | n when n > 0 -> fibo (n-1) + fibo (n-2)
+    | _ -> 0
 
 // 7.1.2
 let rec sum = function
